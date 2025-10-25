@@ -20,18 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Debug environment
-        run: |
-          echo "AWS_S3_BUCKET=${AWS_S3_BUCKET}"
-          echo "AWS_REGION=${AWS_REGION}"
-          echo "SOURCE_DIR=${SOURCE_DIR}"
-          echo "Files in dist:"
-          ls -la dist
-        env:
-          AWS_S3_BUCKET: ${{ secrets.S3_BUCKET }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: dist
-
       - name: Build frontend with secrets
         run: npm run build
         env:
