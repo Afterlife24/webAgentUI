@@ -9,7 +9,7 @@ const LiveKitWidget = ({ setShowSupport, voiceOnly = false }) => {
   const getToken = useCallback(async () => {
     try {
       // Use environment variable for backend URL, fallback to localhost for development
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://api.afterlife.org.in';
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://backend.afterlife.org.in';
       // const response = await fetch(
       //   `${backendUrl}/getToken?name=${encodeURIComponent("admin")}`
       // );
