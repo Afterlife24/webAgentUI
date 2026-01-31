@@ -9,7 +9,6 @@ const Booking = () => {
   const navigate = useNavigate();
   const [date, setDate] = useState<Date | undefined>(new Date());
 
-  
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
